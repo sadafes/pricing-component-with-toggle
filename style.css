@@ -1,0 +1,191 @@
+@import url("https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght,YOPQ@700,40..300&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Montserrat";
+  font-size: 15px;
+}
+body{
+  background-image: url('images/bg-top.svg'), url('images/bg-bottom.svg');
+  background-position: top right, bottom left; 
+  background-repeat: no-repeat; 
+  background-size: auto; 
+  height: 100vh; 
+  background-color: #F7F7FE;
+}
+.montserrat {
+  font-family: "Montserrat", serif;
+  font-optical-sizing: auto;
+  font-weight: 700;
+  font-style: normal;
+}
+.header {
+  margin: 30px 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  color: #6e728e;
+}
+h1 {
+  font-size: 32px;
+}
+h2 {
+  font-size: 18px;
+  margin-bottom: 20px;
+}
+.toggle-header {
+  width: 239px;
+  height: 32px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.toggle-btn {
+  width: 56px;
+  height: 32px;
+  background: linear-gradient(to right, hsl(236, 72%, 79%), hsl(237, 63%, 64%));
+  border-radius: 50px;
+  position: relative;
+  transition: background-color 0.3s;
+  display: flex;
+  justify-content: space-between;
+  padding: 5px;
+}
+.toggle-btn:hover {
+  cursor: pointer;
+}
+.circle {
+  width: 24px;
+  height: 24px;
+  background-color: white;
+  border-radius: 50%;
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  transition: transform 0.3s ease;
+}
+/* Container for the boxes */
+.container {
+  padding-top: 30px;
+  display: flex;
+  justify-content: flex-start;
+  width: 100%;
+  max-width: 1050px;
+  align-items: center;
+}
+/* Box Styling */
+.box-side {
+  background-color: white;
+  width: 32%;
+  height: 453px;
+  padding-top: 20px;
+  border-radius: 10px;
+  transition: all 0.3s ease;
+  text-align: center;
+  box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.02);
+}
+.box-middle {
+    background:linear-gradient(to right, hsl(236, 72%, 79%), hsl(237, 63%, 64%));
+    color: #fff; 
+    width: 32%;
+    height: 501px;
+    padding-top: 44px;
+    border-radius: 10px;
+    transition: all 0.3s ease;
+    text-align: center;
+  }
+/* Price Styling */
+.price {
+    display: inline-flex; 
+    align-items: center;
+    font-weight: bold;
+  margin-bottom: 20px;
+  font-size: 72px; 
+  color: #4A4D60;
+}
+.box-middle .price{
+  color: #fff;
+}
+.currency {
+    font-size: 40px; 
+    vertical-align: middle;
+    margin-right: 5px;
+  }
+#price3 , #price2 , #price1
+{
+    font-size: 72px;   
+}
+/* Description Styling */
+.description {
+  font-size: 14px;
+  margin: 10px 0;
+}
+.description-line {
+  width: 80%;
+  height: 1px;
+  background-color: #ddd;
+  margin: 20px auto;
+}
+/* Button Styling */
+.btn {
+  background:linear-gradient(to right, hsl(236, 72%, 79%), hsl(237, 63%, 64%));
+  color:#ddd;
+  width: 80%;
+  padding: 10px 20px;
+  border: 2px solid transparent;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  margin-top: 50px;
+} 
+.box-middle .btn{
+  background:#fff;
+  color: #6D72DE;
+}
+.btn:hover {
+  background:inherit;
+  color: inherit;
+  border-color: currentColor;
+}
+/* Responsive Design for Mobile */
+@media screen and (max-width: 1024px) and (min-width: 768px) 
+{
+  .box-middle , .box-side {
+    flex: 1 1 32%; 
+}
+.header {
+  margin: 30px 5px;
+}
+}
+@media (max-width: 768px) {
+  body{
+  background-image: url('images/bg-top.svg');
+  background-position: calc(100% + 170px) calc(0% - 40px); 
+  background-repeat: no-repeat; 
+  }
+  .header {
+    margin: 30px 5px;
+  }
+  .container {
+    flex-direction: column;
+    align-items: center;
+    width: 85%;
+  }
+  .box-middle , .box-side {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+}
+/* Style for the button when selected */
+#toggleBtn.active .circle {
+  transform: translateX(-24px);
+}
+.attribution {
+  font-size: 11px; 
+  text-align: center;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
