@@ -21,7 +21,7 @@ Users should be able to:
 
 ### Links
 
-- Live Site URL: (https://github.com/sadafes/pricing-component-with-toggle.git)
+- Live Site URL: [https://sadafes.github.io/pricing-component-with-toggle/]
 
 ### Built with
 
