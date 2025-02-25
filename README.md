@@ -14,9 +14,9 @@ Users should be able to:
 ### Screenshot
 
 - desktop view : 
-![desktop](https://github.com/sadafes/FourCard/assets/139676139/226daa0f-df86-4aba-9a72-075887bda944)
+![desktop](https://github.com/sadafes/pricing-component-with-toggle/issues/1#issue-2877864038)
 - mobile view:
- ![mobile1](https://github.com/sadafes/FourCard/assets/139676139/0d8ad41e-4ae2-44b2-be7d-a56d7c9a37ea)
+ ![mobile1](https://github.com/sadafes/pricing-component-with-toggle/issues/2#issue-2877868301)
 
 
 ### Links
