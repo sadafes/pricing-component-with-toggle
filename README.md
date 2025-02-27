@@ -14,14 +14,17 @@ Users should be able to:
 ### Screenshot
 
 - desktop view : 
-![desktop](https://github.com/sadafes/pricing-component-with-toggle/issues/1#issue-2877864038)
-- mobile view:
- ![mobile1](https://github.com/sadafes/pricing-component-with-toggle/issues/2#issue-2877868301)
 
+
+![desktop] https://github.com/sadafes/pricing-component-with-toggle/issues/3#issue-2884051760
+- mobile view:
+ ![mobile] https://github.com/sadafes/pricing-component-with-toggle/issues/4#issue-2884053888
 
 ### Links
 
-- Live Site URL: [https://sadafes.github.io/pricing-component-with-toggle/]
+
+- ![Live Site Url] [https://sadafes.github.io/pricing-component-with-toggle/]
+
 
 ### Built with
 

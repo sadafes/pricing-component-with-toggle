@@ -21,7 +21,7 @@ body{
   font-style: normal;
 }
 .header {
-  margin: 30px 60px;
+  margin-top: 70px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -30,6 +30,7 @@ body{
 }
 h1 {
   font-size: 32px;
+  margin-bottom: 40px;
 }
 h2 {
   font-size: 18px;
@@ -41,6 +42,7 @@ h2 {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  margin-bottom: 64px;
 }
 .toggle-btn {
   width: 56px;
@@ -57,30 +59,25 @@ h2 {
   cursor: pointer;
 }
 .circle {
-  width: 24px;
-  height: 24px;
   background-color: white;
   border-radius: 50%;
-  position: absolute;
-  top: 5px;
-  right: 5px;
   transition: transform 0.3s ease;
 }
 /* Container for the boxes */
 .container {
-  padding-top: 30px;
   display: flex;
-  justify-content: flex-start;
+  justify-content: center;
+  align-items: flex-start;
   width: 100%;
   max-width: 1050px;
-  align-items: center;
 }
 /* Box Styling */
 .box-side {
   background-color: white;
   width: 32%;
-  height: 453px;
-  padding-top: 20px;
+  max-width: 350px;
+  padding-top: 30px;
+  margin-top: 30px;
   border-radius: 10px;
   transition: all 0.3s ease;
   text-align: center;
@@ -90,8 +87,11 @@ h2 {
     background:linear-gradient(to right, hsl(236, 72%, 79%), hsl(237, 63%, 64%));
     color: #fff; 
     width: 32%;
-    height: 501px;
-    padding-top: 44px;
+    max-width: 350px;
+    padding-top: 54px;
+    padding-bottom: 24px;
+    margin-top: 6px;
+    margin-bottom: 54px;
     border-radius: 10px;
     transition: all 0.3s ease;
     text-align: center;
@@ -122,23 +122,30 @@ h2 {
   font-size: 14px;
   margin: 10px 0;
 }
-.description-line {
+hr {
   width: 80%;
   height: 1px;
-  background-color: #ddd;
+  opacity: 0.25;
+background: #6E728E;
   margin: 20px auto;
+}
+.box-middle hr{
+background: #fff;
 }
 /* Button Styling */
 .btn {
   background:linear-gradient(to right, hsl(236, 72%, 79%), hsl(237, 63%, 64%));
-  color:#ddd;
+  color:#fff;
+  font-size: 13px;
+  letter-spacing: 1.393px;
   width: 80%;
+  max-width: 288px;
   padding: 10px 20px;
-  border: 2px solid transparent;
-  border-radius: 5px;
+  border: 1px solid transparent;
+  border-radius: 6px;
   cursor: pointer;
   transition: background-color 0.3s;
-  margin-top: 50px;
+  margin: 32px;
 } 
 .box-middle .btn{
   background:#fff;
@@ -148,15 +155,16 @@ h2 {
   background:inherit;
   color: inherit;
   border-color: currentColor;
+  transition: background-color 0.3s;
 }
-/* Responsive Design for Mobile */
+/* Responsive Design */
 @media screen and (max-width: 1024px) and (min-width: 768px) 
 {
   .box-middle , .box-side {
     flex: 1 1 32%; 
 }
 .header {
-  margin: 30px 5px;
+  margin-top: 64px;
 }
 }
 @media (max-width: 768px) {
@@ -176,11 +184,15 @@ h2 {
   .box-middle , .box-side {
     width: 100%;
     margin-bottom: 20px;
+    padding-top: 30px;
   }
+  .box-middle {
+    order: -1; 
+}
 }
 /* Style for the button when selected */
 #toggleBtn.active .circle {
-  transform: translateX(-24px);
+  transform: translateX(24px);
 }
 .attribution {
   font-size: 11px; 
