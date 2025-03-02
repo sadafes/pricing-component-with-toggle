@@ -11,7 +11,7 @@ body{
   background-position: top right, bottom left; 
   background-repeat: no-repeat; 
   background-size: auto; 
-  height: 100vh; 
+  min-height: 100vh; 
   background-color: #F7F7FE;
 }
 .montserrat {
@@ -72,7 +72,7 @@ h2 {
   max-width: 1050px;
 }
 /* Box Styling */
-.box-side {
+.box-Basic , .box-Master {
   background-color: white;
   width: 32%;
   max-width: 350px;
@@ -83,7 +83,7 @@ h2 {
   text-align: center;
   box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.02);
 }
-.box-middle {
+.box-Professional {
     background:linear-gradient(to right, hsl(236, 72%, 79%), hsl(237, 63%, 64%));
     color: #fff; 
     width: 32%;
@@ -105,7 +105,7 @@ h2 {
   font-size: 72px; 
   color: #4A4D60;
 }
-.box-middle .price{
+.box-Professional .price{
   color: #fff;
 }
 .currency {
@@ -115,23 +115,28 @@ h2 {
   }
 #price3 , #price2 , #price1
 {
-    font-size: 72px;   
+  font-size: 72px;
 }
 /* Description Styling */
 .description {
   font-size: 14px;
-  margin: 10px 0;
-}
-hr {
+  border-bottom: 1px solid rgba(110, 114, 142, 0.25);
+  margin: 0 auto;
   width: 80%;
-  opacity: 0.25;
-  margin: 20px auto;
-  border: 0;
-  border-top: 1px solid #6E728E;
+  padding: 20px;
 }
-.box-middle hr{
-  border-color: #fff;
+.box-Basic p.description:first-of-type,
+.box-Master p.description:first-of-type {
+  border-top: 1px solid rgba(110, 114, 142, 0.25); 
 }
+
+.box-Professional .description{
+  border-color: rgba(255, 255, 255, 0.25);
+}
+.box-Professional p.description:first-of-type{
+  border-top: 1px solid rgba(255, 255, 255, 0.25); 
+}
+
 /* Button Styling */
 .btn {
   background:linear-gradient(to right, hsl(236, 72%, 79%), hsl(237, 63%, 64%));
@@ -147,7 +152,7 @@ hr {
   transition: background-color 0.3s;
   margin: 32px;
 } 
-.box-middle .btn{
+.box-Professional .btn{
   background:#fff;
   color: #6D72DE;
 }
@@ -157,10 +162,18 @@ hr {
   border-color: currentColor;
   transition: background-color 0.3s;
 }
+.attribution {
+  font-size: 11px; 
+  text-align: center;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+  padding-bottom: 20px;
+}
 /* Responsive Design */
 @media screen and (max-width: 1024px) and (min-width: 768px) 
 {
-  .box-middle , .box-side {
+  .box-Professional , .box-Master , .box-Basic {
     flex: 1 1 32%; 
 }
 .header {
@@ -181,23 +194,16 @@ hr {
     align-items: center;
     width: 85%;
   }
-  .box-middle , .box-side {
+  .box-Professional , .box-Master , .box-Basic {
     width: 100%;
     margin-bottom: 20px;
     padding-top: 30px;
   }
-  .box-middle {
+  .box-Professional {
     order: -1; 
 }
 }
 /* Style for the button when selected */
 #toggleBtn.active .circle {
   transform: translateX(24px);
-}
-.attribution {
-  font-size: 11px; 
-  text-align: center;
-}
-.attribution a {
-  color: hsl(228, 45%, 44%);
 }
